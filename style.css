@@ -8,16 +8,27 @@ body {
   margin: 0px auto;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  letter-spacing: 2px;
+
   background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+main {
+  max-width: 590px;
+  margin: 0px auto;
+  margin-top: 65px;
+  background-color: #fff;
+  box-shadow: 4px 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px 15px;
 }
 
 h1 {
   text-align: center;
-  color: var(--primary-color);
   text-transform: capitalize;
   font-size: 40px;
-  margin: 0;
+  margin: 10px 0;
+  letter-spacing: 2px;
 }
 
 hr {
@@ -33,6 +44,17 @@ img {
   object-fit: cover;
   border-radius: 50%;
 }
+
+p {
+  text-align: center;
+  padding: 0 20px;
+  color: hsl(210, 22%, 49%);
+  font-size: 16px;
+  margin-top: 0;
+  font-family: "Open", sans-serif;
+  line-height: 23px;
+}
+
 .quotes {
   position: absolute;
   background-color: var(--secondary-color);
@@ -44,73 +66,80 @@ img {
   color: #fff;
   line-height: 2;
   z-index: 1;
-  top: 22px;
+  top: 15px;
 }
 
 .circular {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: auto;
   box-shadow: var(--secondary-color) 7px -6px 0px;
 }
 
-ul {
-  margin: 0px;
-  padding: 0px;
+.author {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 15px;
 }
-
-li {
-  list-style-type: none;
-  display: inline;
-}
-
-main {
-  max-width: 50%;
-  margin: 0px auto;
-  margin-top: 16%;
-  background-color: aqua;
+.sphere {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin: 10px;
+  color: var(--secondary-color);
 }
 
 .arrow {
-  border: solid #000;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 7px;
-  border-radius: 1px;
-  font-weight: 900;
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 .btn {
-  display: block;
-  margin: 0 auto;
-  padding: 12px 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  opacity: 0.8;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.9);
-  margin-top: 40px;
+  border: 0;
+  background-color: #fff;
+}
+.btn i {
   transition: all 0.3s linear;
+  color: hsl(205, 90%, 76%);
+  font-size: 20px;
 }
 
-.btn:hover {
-  background-color: #000;
-  opacity: 0.9;
-  color: #fff;
+.btn:hover i {
+  color: hsl(205, 78%, 60%);
+  cursor: pointer;
+}
+
+#btn-surprise-me {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 4px 8px;
+  font-size: 14px;
+  text-transform: capitalize;
+  background-color: hsl(205, 100%, 96%);
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid hsl(205, 78%, 60%);
+  transition: all 0.3s linear;
+  color: var(--secondary-color);
+}
+
+#btn-surprise-me:hover {
+  background-color: hsl(205, 78%, 60%);
+  color: hsl(205, 86%, 17%);
   cursor: pointer;
 }
 
 @media (max-width: 767px) {
   main {
-    max-width: 80%;
-    margin-top: 30%;
+    max-width: 500px;
+    margin: 50px 20px auto;
   }
-  /* h1 {
-    font-size: 25px;
-  } */
 }
