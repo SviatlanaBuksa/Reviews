@@ -42,27 +42,31 @@ let authorName = document.getElementById("author-name");
 let profession = document.getElementById("profession");
 let review = document.getElementById("review");
 
-window.addEventListener("load", showNextReview);
-
 let nextBtn = document.getElementById("next-btn");
-nextBtn.addEventListener("click", () => (count < 3 ? ++count : (count = 0)));
-nextBtn.addEventListener("click", showNextReview);
+let prevBtn = document.getElementById("previous-btn");
+let randomBtn = document.getElementById("btn-surprise-me");
 
-let previousBtn = document.getElementById("previous-btn");
-previousBtn.addEventListener("click", () =>
-  count == 0 ? console.log((count = 3)) : console.log(--count)
-);
-previousBtn.addEventListener("click", showNextReview);
+window.addEventListener("DOMContentLoaded", showNextReview);
+nextBtn.addEventListener("click", () => {
+  count < reviews.length - 1 ? ++count : (count = 0);
+  showNextReview();
+});
 
-let surpriseBtn = document.getElementById("btn-surprise-me");
-surpriseBtn.addEventListener(
+prevBtn.addEventListener("click", () => {
+  count == 0 ? (count = reviews.length - 1) : --count;
+  showNextReview();
+});
+
+randomBtn.addEventListener(
   "click",
-  () => (count = Math.floor(Math.random() * 4))
+  () => (count = Math.floor(Math.random() * reviews.length))
 );
-surpriseBtn.addEventListener("click", showNextReview);
+randomBtn.addEventListener("click", showNextReview);
 function showNextReview() {
-  img.src = reviews[count].img;
-  authorName.innerText = reviews[count].name;
-  profession.innerText = reviews[count].profession;
-  review.innerText = reviews[count].review;
+  let currrentReview = reviews[count];
+
+  img.src = currrentReview.img;
+  authorName.innerText = currrentReview.name;
+  profession.innerText = currrentReview.profession;
+  review.innerText = currrentReview.review;
 }
