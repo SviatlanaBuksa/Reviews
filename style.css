@@ -64,7 +64,7 @@ p {
   top: 15px;
 }
 
-.circular {
+.img-container {
   position: relative;
   width: 150px;
   height: 150px;
@@ -73,23 +73,19 @@ p {
   box-shadow: var(--secondary-color) 7px -6px 0px;
 }
 
-.author {
+#author-name {
   display: block;
   margin-top: 20px;
-  color: var(--primary-color);
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 15px;
+  text-transform: capitalize;
 }
-.sphere {
+#profession {
   display: block;
   text-transform: uppercase;
   font-size: 13px;
   margin: 10px;
-  color: var(--secondary-color);
-}
-
-.arrow {
   color: var(--secondary-color);
 }
 
